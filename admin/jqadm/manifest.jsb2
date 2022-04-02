@@ -1,0 +1,22 @@
+{
+	"projectName": "asiyya-extension-pro",
+	"licenseText": "proprietary",
+	"pkgs": [{
+		"name": "asiyya-extension-pro CSS",
+		"file": "asiyya-extension-pro.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.css",
+			"path": "themes/"
+		}]
+	}, {
+		"name": "asiyya-extension-pro JS",
+		"file": "asiyya-extension-pro.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.js",
+			"path": "js/"
+		}]
+	}],
+	"resources" : []
+}
