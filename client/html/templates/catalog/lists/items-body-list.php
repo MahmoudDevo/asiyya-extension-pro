@@ -4,7 +4,10 @@
  * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
  * @copyright Aimeos (aimeos.org), 2016-2021
  */
+/* 
+DEVO-01 grid view 
 
+*/
 $enc = $this->encoder();
 $position = $this->get( 'itemPosition' );
 
@@ -25,9 +28,9 @@ $basketSite = $this->config( 'client/html/basket/standard/url/site' );
 ?>
 <?php $this->block()->start( 'catalog/lists/items' ) ?>
 <div class="catalog-list-items">
-
+LIST
 	<div class="list-items list"><!--
-
+ 
 		<?php foreach( $this->get( 'listProductItems', [] ) as $id => $productItem ) : $firstImage = true ?>
 			<?php
 				$params = array_diff_key( ['d_name' => $productItem->getName( 'url' ), 'd_prodid' => $productItem->getId(), 'd_pos' => $position !== null ? $position++ : ''], $detailFilter );

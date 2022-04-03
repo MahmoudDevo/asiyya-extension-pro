@@ -78,8 +78,7 @@ $textTypes = $this->config( 'client/html/catalog/lists/head/text-types', array( 
 
 
 ?>
-<section class="aimeos catalog-list <?= $enc->attr( $this->get( 'listCatPath', map() )->getConfigValue( 'css-class', '' )->join( ' ' ) ) ?>" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ) ?>">
-DEVO01
+<section class="aimeos catalog-list Test--class <?= $enc->attr( $this->get( 'listCatPath', map() )->getConfigValue( 'css-class', '' )->join( ' ' ) ) ?>" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ) ?>">
 	<?php if( isset( $this->listErrorList ) ) : ?>
 		<ul class="error-list">
 			<?php foreach( (array) $this->listErrorList as $errmsg ) : ?>

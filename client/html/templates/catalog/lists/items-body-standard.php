@@ -6,6 +6,7 @@
  * @copyright Aimeos (aimeos.org), 2015-2021
  */
 
+
 $enc = $this->encoder();
 
 
@@ -53,13 +54,13 @@ $infiniteScroll = $this->config( 'client/html/catalog/lists/infinite-scroll', fa
 
 ?>
 <?php $this->block()->start( 'catalog/lists/items' ) ?>
-<div class="catalog-list-items" data-infinite-url="<?= $infiniteScroll && $this->get( 'listPageNext', 0 ) > $this->get( 'listPageCurr', 0 ) ? $this->url( $listTarget, $listController, $listAction, array( 'l_page' => $this->get( 'listPageNext' ) ) + $this->get( 'listParams', [] ), [], $listConfig ) : '' ?>">
-
+<div style='border:1px solid orange ; padding:30px;' class="catalog-list-items" data-infinite-url="<?= $infiniteScroll && $this->get( 'listPageNext', 0 ) > $this->get( 'listPageCurr', 0 ) ? $this->url( $listTarget, $listController, $listAction, array( 'l_page' => $this->get( 'listPageNext' ) ) + $this->get( 'listParams', [] ), [], $listConfig ) : '' ?>">
+ grid
 	<?= $this->partial(
-		$this->config( 'client/html/common/partials/products', 'common/partials/products-standard' ),
+		$this->config( 'client/html/common/partials/products', 'common/partials/products-asiyya' ),
 		array(
 			'require-stock' => (int) $this->config( 'client/html/basket/require-stock', true ),
-			'basket-add' => $this->config( 'client/html/catalog/lists/basket-add', false ),
+			'basket-add' => $this->config( 'client/html/catalog/lists/basket-add', true ),
 			'productItems' => $this->get( 'itemsProductItems', map() ),
 			'products' => $this->get( 'listProductItems', map() ),
 			'position' => $this->get( 'itemPosition' ),

@@ -159,19 +159,19 @@ $detailFilter = array_flip( $this->config( 'client/html/catalog/detail/url/filte
 
 
 ?>
-<div class="list-items">
- 
+<div style='border:1px solid green ; padding:30px;' class="list-items">
+GRID debut asiyya
 	<?php foreach( $this->get( 'products', [] ) as $id => $productItem ) : ?>
 		<?php
 			$params = array_diff_key( ['d_name' => $productItem->getName( 'url' ), 'd_prodid' => $productItem->getId(), 'd_pos' => $position !== null ? $position++ : ''], $detailFilter );
 			$url = $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig );
 		?>
 
-		<div class="product" data-reqstock="<?= (int) $this->get( 'require-stock', true ) ?>"
+		<div style='border:1px solid blue ; padding:30px;' class="product   " data-reqstock="<?= (int) $this->get( 'require-stock', true ) ?>"
 			itemprop="<?= $this->get( 'itemprop' ) ?>" itemscope itemtype="http://schema.org/Product">
 
-			<div class="product-item <?= $enc->attr( $productItem->getConfigValue( 'css-class' ) ) ?>">
-				<div class="badges">
+			<div class="product-item  <?= $enc->attr( $productItem->getConfigValue( 'css-class' ) ) ?>" style=" box-sizing: content-box; border:1px solid red ; "  >
+				<div class="badges"   >
 					<span class="badge-item new"><?= $enc->html( $this->translate( 'client', 'New' ) ) ?></span>
 					<span class="badge-item sale"><?= $enc->html( $this->translate( 'client', 'Sale' ) ) ?></span>
 				</div>
